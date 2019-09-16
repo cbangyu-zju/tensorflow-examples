@@ -30,8 +30,7 @@ class LogisticModel(object):
         W = tf.Variable(tf.zeros([num_feature, num_class]))
         b = tf.Variable(tf.zeros([num_class]))
         pred = tf.nn.softmax(tf.matmul(x, W) + b)
-        # cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(pred, y))
-        cost = tf.reduce_mean(-tf.reduce_sum(y * tf.log(pred), reduction_indices=1))
+        cost = tf.reduce_mean(-tf.reduce_sum(y * tf.log(pred), axis=1))
 
         optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
 
