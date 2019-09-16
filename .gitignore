@@ -3,3 +3,4 @@ data
 venv
 LinearClassify/MNIST_Data
 LinearClassify/statics
+.DS_Store
