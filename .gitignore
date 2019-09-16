@@ -1,0 +1,5 @@
+data
+.idea
+venv
+LinearClassify/MNIST_Data
+LinearClassify/statics
